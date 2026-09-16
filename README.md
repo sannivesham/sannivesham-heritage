@@ -1,4 +1,4 @@
-# 🇮🇳 BHARATVERSE — One Nation. Thousands of Stories. One Digital Heritage.
+# 🇮🇳 SANNIVESHAM — One Nation. Thousands of Stories. One Digital Heritage.
 
 > **“An interactive digital platform that transforms India’s diverse cultural heritage into an immersive learning experience for the next generation.”**
 
@@ -10,7 +10,7 @@
 
 ## 🌟 Overview
 
-**BHARATVERSE** (*Explore • Experience • Preserve*) is a national digital ecosystem designed for **Smart India Hackathon (SIH 2026)**. It connects sacred tangible monuments, classical performing arts, GI-tagged traditional handicrafts, living harvest festivals, classical languages, and oral memories into a unified, interactive platform.
+**SANNIVESHAM** (*Explore • Experience • Preserve*) is a national digital ecosystem designed for **Smart India Hackathon (SIH 2026)**. It connects sacred tangible monuments, classical performing arts, GI-tagged traditional handicrafts, living harvest festivals, classical languages, and oral memories into a unified, interactive platform.
 
 ---
 
@@ -89,6 +89,6 @@ Then visit: `http://localhost:8080/`
 ---
 
 ## 👨🎓 Author & Institution
-- **Product Name**: BHARATVERSE
+- **Product Name**: SANNIVESHAM
 - **Institution**: Sreenidhi Institute of Science and Technology (SNIST), Hyderabad
 - **Event**: Smart India Hackathon (SIH 2026)

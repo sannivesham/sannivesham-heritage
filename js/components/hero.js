@@ -26,9 +26,9 @@ export function renderHero(container, onNavigate, onSelectState) {
 
         <!-- Main Title -->
         <div class="space-y-4">
-          <p class="font-devanagari text-base sm:text-xl text-amber-400/80 tracking-widest">एकं सद् विप్రా బహుధా వదంతి • अनेकता में एकता</p>
+          <p class="font-devanagari text-base sm:text-xl text-amber-400/80 tracking-widest">సన్నివేశం • సంస్కృతి • ఏకతా • One Digital Heritage</p>
           <h1 class="font-cinzel text-5xl sm:text-7xl lg:text-8xl font-black tracking-tight text-white leading-none">
-            BHARAT<span class="text-gold-gradient">VERSE</span>
+            SANNIVE<span class="text-gold-gradient">SHAM</span>
           </h1>
           <p class="font-cinzel text-xl sm:text-2xl lg:text-3xl font-semibold text-amber-300/90 tracking-wide max-w-3xl mx-auto">
             One Nation. Thousands of Stories. One Digital Heritage.
@@ -82,7 +82,7 @@ export function renderHero(container, onNavigate, onSelectState) {
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-amber-900/30">
       <div class="text-center space-y-3 mb-12">
         <span class="text-xs font-semibold tracking-widest text-amber-400 uppercase">Core SIH Innovation Pillars</span>
-        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">The BharatVerse Digital Ecosystem</h2>
+        <h2 class="font-cinzel text-3xl sm:text-4xl font-bold text-white">The Sannivesham Digital Ecosystem</h2>
         <p class="text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base">A connected architecture empowering exploration, education, research, and civic preservation.</p>
       </div>
 

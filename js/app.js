@@ -19,10 +19,10 @@ import { renderHeritageAlert } from "./components/heritageAlert.js";
 import { renderInstitutionMode } from "./components/institutionMode.js";
 import { HERITAGE_CATALOG } from "./data/heritageData.js";
 
-class BharatverseApp {
+class SanniveshamApp {
   constructor() {
     // Initial user state with local storage fallback
-    const savedXp = localStorage.getItem("bharatverse_user_xp");
+    const savedXp = localStorage.getItem("sannivesham_user_xp");
     this.state = {
       userName: "Reshwanth",
       userInitials: "RS",
@@ -69,7 +69,7 @@ class BharatverseApp {
 
   updateXp(amount) {
     this.state.userXp += amount;
-    localStorage.setItem("bharatverse_user_xp", this.state.userXp.toString());
+    localStorage.setItem("sannivesham_user_xp", this.state.userXp.toString());
     this.showToast(`🎉 +${amount} Culture XP Earned! Total: ${this.state.userXp} XP`);
     this.renderNavbarOnly();
   }
@@ -333,5 +333,5 @@ class BharatverseApp {
 
 // Instantiate on DOMContentLoaded
 window.addEventListener("DOMContentLoaded", () => {
-  window.app = new BharatverseApp();
+  window.app = new SanniveshamApp();
 });

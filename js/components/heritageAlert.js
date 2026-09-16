@@ -31,7 +31,7 @@ export function renderHeritageAlert(container, state, onNewReport) {
 
   let storedReports = [];
   try {
-    const raw = localStorage.getItem("bharatverse_reports");
+    const raw = localStorage.getItem("sannivesham_reports");
     if (raw) storedReports = JSON.parse(raw);
   } catch (e) {}
 
@@ -196,7 +196,7 @@ export function renderHeritageAlert(container, state, onNewReport) {
 
       storedReports.unshift(newRep);
       try {
-        localStorage.setItem("bharatverse_reports", JSON.stringify(storedReports));
+        localStorage.setItem("sannivesham_reports", JSON.stringify(storedReports));
       } catch (err) {}
 
       onNewReport(50);

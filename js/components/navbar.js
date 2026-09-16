@@ -9,12 +9,12 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
           <div class="flex items-center space-x-3 cursor-pointer group" id="brand-logo">
             <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 via-rose-800 to-amber-700 flex items-center justify-center p-0.5 shadow-lg shadow-amber-500/20 group-hover:scale-105 transition-transform duration-300">
               <div class="w-full h-full bg-[#140f12] rounded-[10px] flex items-center justify-center border border-amber-400/40">
-                <span class="text-2xl font-cinzel font-bold text-amber-400">भ</span>
+                <span class="text-2xl font-cinzel font-bold text-amber-400">స</span>
               </div>
             </div>
             <div>
               <div class="flex items-center space-x-1.5">
-                <span class="font-cinzel text-xl font-bold tracking-wider text-white group-hover:text-amber-300 transition-colors">BHARAT<span class="text-amber-400">VERSE</span></span>
+                <span class="font-cinzel text-xl font-bold tracking-wider text-white group-hover:text-amber-300 transition-colors">SANNIVE<span class="text-amber-400">SHAM</span></span>
                 <span class="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 font-semibold tracking-wider">SIH 2026</span>
               </div>
               <p class="text-[11px] text-amber-200/70 tracking-widest uppercase">Explore • Experience • Preserve</p>

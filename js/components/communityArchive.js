@@ -28,7 +28,7 @@ export function renderCommunityArchive(container, state, onNewSubmission) {
 
   let storedSubmissions = [];
   try {
-    const raw = localStorage.getItem("bharatverse_contributions");
+    const raw = localStorage.getItem("sannivesham_contributions");
     if (raw) storedSubmissions = JSON.parse(raw);
   } catch (e) {}
 
@@ -174,7 +174,7 @@ export function renderCommunityArchive(container, state, onNewSubmission) {
 
       storedSubmissions.unshift(newEntry);
       try {
-        localStorage.setItem("bharatverse_contributions", JSON.stringify(storedSubmissions));
+        localStorage.setItem("sannivesham_contributions", JSON.stringify(storedSubmissions));
       } catch (err) {}
 
       onNewSubmission(75);
