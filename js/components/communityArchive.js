@@ -46,7 +46,7 @@ export function renderCommunityArchive(container, state, onNewSubmission) {
             <p class="text-xs text-neutral-300 mt-1">Document your family lore, elder songs, disappearing local recipes, and village traditions before they vanish.</p>
           </div>
           <div class="text-xs text-emerald-300 bg-emerald-950/60 px-3.5 py-1.5 rounded-xl border border-emerald-500/30">
-            🛡️ AICTE & State Archival Moderation Workflow
+            🛡️ Verified Archival Moderation Workflow
           </div>
         </div>
 

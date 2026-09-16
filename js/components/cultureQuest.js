@@ -60,7 +60,7 @@ export function renderCultureQuest(container, state, onUpdateXp) {
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Gamified Learning</span>
-              <span class="text-xs text-neutral-400">SIH Signature Innovation #3</span>
+              <span class="text-xs text-neutral-400">Gamified Learning System</span>
             </div>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-black text-white mt-1">CULTURE QUEST</h1>
             <p class="text-xs text-neutral-300">Level up your cultural wisdom. Learn through challenges, earn Culture XP, and claim digital heritage badges.</p>

@@ -81,7 +81,7 @@ export function renderBharatAi(container) {
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-rose-500/20 text-rose-300 uppercase tracking-wider">Verified Knowledge</span>
-              <span class="text-xs text-neutral-400">SIH Signature Innovation #2</span>
+              <span class="text-xs text-neutral-400">Interactive Cultural AI Guide</span>
             </div>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Bharat AI Cultural Guide</h1>
             <p class="text-xs text-neutral-300">Grounding ancient wisdom with zero hallucinations. Every insight cites official archives.</p>

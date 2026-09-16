@@ -96,7 +96,7 @@ export function renderHeritageNearMe(container) {
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Hyperlocal Heritage</span>
-              <span class="text-xs text-neutral-400">SIH Innovation Feature</span>
+              <span class="text-xs text-neutral-400">Hyperlocal Heritage Discovery</span>
             </div>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Heritage Near Me</h1>
             <p class="text-xs text-neutral-300 mt-1">Discover monuments, artisan workshops, and cultural theatres within your reach in <strong class="text-amber-300">${userLocation}</strong>.</p>

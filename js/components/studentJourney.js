@@ -75,10 +75,10 @@ export function renderStudentJourney(container, state, onStartJourney) {
         <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <div class="flex items-center space-x-2">
-              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">AICTE Student Innovation</span>
+              <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Personalized Learning Pathway</span>
               <span class="text-xs text-neutral-400">Student Centric Mode</span>
             </div>
-            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">BharatVerse for Students</h1>
+            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Sannivesham for Students</h1>
             <p class="text-xs text-neutral-300 mt-1">Pick your academic and personal passions to generate a custom 5-Day micro-curriculum with gamified missions.</p>
           </div>
           <div class="text-xs text-amber-300 bg-amber-500/10 px-3 py-1.5 rounded-xl border border-amber-500/20">

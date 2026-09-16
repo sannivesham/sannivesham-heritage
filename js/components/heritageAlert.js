@@ -46,7 +46,7 @@ export function renderHeritageAlert(container, state, onNewReport) {
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-rose-500/20 text-rose-300 uppercase tracking-wider">Civic Heritage Guard</span>
-              <span class="text-xs text-neutral-400">SIH Signature Innovation #5</span>
+              <span class="text-xs text-neutral-400">Civic Preservation Network</span>
             </div>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Heritage Alert: Preservation Network</h1>
             <p class="text-xs text-neutral-300 mt-1">Transform from passive readers into active custodians. Report damaged structures, vanishing crafts, or endangered oral traditions.</p>

@@ -11,7 +11,7 @@ export function renderCulturalMap(container, onSelectState, activeStateId = "tel
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Geospatial Heritage</span>
-              <span class="text-xs text-neutral-400">SIH Signature Innovation #1</span>
+              <span class="text-xs text-neutral-400">Interactive Geospatial Layer</span>
             </div>
             <h1 class="font-cinzel text-2xl sm:text-4xl font-bold text-white mt-1">Cultural GIS Map of Bharat</h1>
             <p class="text-xs sm:text-sm text-neutral-300 mt-1">Explore India's tangible and living heritage geographically. Select layers to map traditions across states.</p>

@@ -34,7 +34,7 @@ export function renderInstitutionMode(container, state) {
             <div>
               <div class="flex items-center space-x-2">
                 <span class="text-xs font-bold px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/40">VERIFIED ACADEMIC INSTITUTION</span>
-                <span class="text-xs text-neutral-400">AICTE Innovation Node</span>
+                <span class="text-xs text-neutral-400">Academic Heritage Chapter</span>
               </div>
               <h1 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-1">Sreenidhi Institute of Science & Technology (SNIST)</h1>
               <p class="text-xs text-neutral-300">Department of Computer Science & Heritage Technology Lab • Hyderabad, Telangana</p>
