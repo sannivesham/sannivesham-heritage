@@ -1,4 +1,4 @@
-// 🏆 BHARATVERSE — Leaderboard & Digital Heritage Badges
+// 🏆 SANNIVESHAM — Leaderboard & Digital Heritage Badges
 import { LEADERBOARD_STUDENTS, LEADERBOARD_COLLEGES, BADGES_DATA } from "../data/questQuestions.js";
 
 export function renderLeaderboard(container, state) {
@@ -9,7 +9,7 @@ export function renderLeaderboard(container, state) {
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
         <!-- Header -->
-        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-xl">
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Academic Gamification</span>
@@ -19,23 +19,23 @@ export function renderLeaderboard(container, state) {
             <p class="text-xs text-neutral-300 mt-1">Students and institutions compete purely on cultural scholarship, field documentation, and heritage quizzes.</p>
           </div>
           <div class="flex items-center space-x-3">
-            <div class="p-3 rounded-2xl bg-gradient-to-r from-amber-950 to-rose-950 border border-amber-500/30 text-right">
+            <div class="p-3.5 rounded-2xl bg-gradient-to-r from-amber-950 to-rose-950 border border-amber-500/30 text-right shadow-inner">
               <p class="text-[10px] text-neutral-400">Your Current Rank</p>
               <p class="text-base font-bold text-amber-300">#6 Pan-India • ${state.userXp} XP</p>
             </div>
           </div>
         </div>
 
-        <!-- View Tabs -->
+        <!-- View Tabs (Standardized h-10) -->
         <div class="flex items-center space-x-2 border-b border-amber-500/20 pb-4">
-          <button data-tab="students" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeTab === 'students' ? 'bg-amber-500 text-neutral-950 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            👨🎓 Student Champions
+          <button data-tab="students" class="tab-btn h-10 px-4 rounded-xl text-xs font-bold border transition-all flex items-center space-x-1.5 ${activeTab === 'students' ? 'bg-amber-500 text-neutral-950 border-amber-400 shadow-md shadow-amber-500/20' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>👨‍🎓 Student Champions</span>
           </button>
-          <button data-tab="colleges" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeTab === 'colleges' ? 'bg-amber-500 text-neutral-950 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🏫 College / University Rankings
+          <button data-tab="colleges" class="tab-btn h-10 px-4 rounded-xl text-xs font-bold border transition-all flex items-center space-x-1.5 ${activeTab === 'colleges' ? 'bg-amber-500 text-neutral-950 border-amber-400 shadow-md shadow-amber-500/20' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🏫 College & University Rankings</span>
           </button>
-          <button data-tab="badges" class="tab-btn px-4 py-2 rounded-xl text-xs font-bold border transition-all ${activeTab === 'badges' ? 'bg-amber-500 text-neutral-950 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🏅 Digital Heritage Badges
+          <button data-tab="badges" class="tab-btn h-10 px-4 rounded-xl text-xs font-bold border transition-all flex items-center space-x-1.5 ${activeTab === 'badges' ? 'bg-amber-500 text-neutral-950 border-amber-400 shadow-md shadow-amber-500/20' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🏅 Digital Heritage Badges</span>
           </button>
         </div>
 
@@ -120,7 +120,7 @@ export function renderLeaderboard(container, state) {
             ${BADGES_DATA.map(badge => {
               const isUnlocked = state.userXp >= badge.xpRequired;
               return `
-                <div class="badge-card glass-panel p-6 rounded-3xl border ${isUnlocked ? 'border-amber-500/50 shadow-xl shadow-amber-500/10' : 'border-neutral-800 opacity-60'} space-y-4 flex flex-col justify-between">
+                <div class="badge-card heritage-card-glow glass-panel p-6 rounded-3xl border ${isUnlocked ? 'border-amber-500/50 shadow-xl shadow-amber-500/10' : 'border-neutral-800 opacity-60'} space-y-4 flex flex-col justify-between h-full">
                   <div>
                     <div class="flex items-center justify-between">
                       <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-neutral-900 to-amber-950/40 border border-amber-500/30 flex items-center justify-center text-3xl shadow-inner">

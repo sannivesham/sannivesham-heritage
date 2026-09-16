@@ -67,7 +67,7 @@ export function renderBharatAi(container) {
   let messages = [
     {
       sender: "ai",
-      text: "Namaste! I am Bharat AI, your source-backed cultural intelligence guide. Ask me anything about India's architecture, philosophy, festivals, languages, or living traditions. Every answer is grounded in verified museum archives, ASI records, and published academic citations.",
+      text: "Namaste! I am Sannivesham AI, your source-backed cultural intelligence guide. Ask me anything about India's architecture, philosophy, festivals, languages, or living traditions. Every answer is grounded in verified museum archives, ASI records, and published academic citations.",
       sources: ["National Archives of India", "Archaeological Survey of India"]
     }
   ];
@@ -83,7 +83,7 @@ export function renderBharatAi(container) {
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-rose-500/20 text-rose-300 uppercase tracking-wider">Verified Knowledge</span>
               <span class="text-xs text-neutral-400">Interactive Cultural AI Guide</span>
             </div>
-            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Bharat AI Cultural Guide</h1>
+            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Sannivesham AI Cultural Guide</h1>
             <p class="text-xs text-neutral-300">Grounding ancient wisdom with zero hallucinations. Every insight cites official archives.</p>
           </div>
           <div class="flex items-center space-x-2 text-xs text-amber-300 bg-amber-500/10 px-3 py-1.5 rounded-xl border border-amber-500/20">
@@ -167,7 +167,7 @@ export function renderBharatAi(container) {
           <input 
             type="text" 
             id="ai-user-input" 
-            placeholder="Ask Bharat AI (e.g. Why is Ugadi celebrated, tell me about Ramappa floating bricks)..." 
+            placeholder="Ask Sannivesham AI (e.g. Why is Ugadi celebrated, tell me about Ramappa floating bricks)..." 
             class="flex-1 bg-transparent border-0 px-3 py-2 text-sm text-white placeholder-neutral-500 focus:outline-none"
           />
           <button id="ai-submit-btn" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center space-x-1">

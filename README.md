@@ -2,7 +2,7 @@
 
 > **“An interactive digital platform that transforms India’s diverse cultural heritage into an immersive learning experience for the next generation.”**
 
-[![SIH 2026](https://img.shields.io/badge/Smart%20India%20Hackathon-2026-orange.svg)](https://www.sih.gov.in/)
+[![Platform: Sannivesham](https://img.shields.io/badge/Platform-Sannivesham-d4af37.svg)](https://sannivesham.github.io/sannivesham-heritage/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
@@ -10,11 +10,11 @@
 
 ## 🌟 Overview
 
-**SANNIVESHAM** (*Explore • Experience • Preserve*) is a national digital ecosystem designed for **Smart India Hackathon (SIH 2026)**. It connects sacred tangible monuments, classical performing arts, GI-tagged traditional handicrafts, living harvest festivals, classical languages, and oral memories into a unified, interactive platform.
+**SANNIVESHAM** (*Explore • Experience • Preserve*) is a unified national digital cultural heritage platform. It connects sacred tangible monuments, classical performing arts, GI-tagged traditional handicrafts, living harvest festivals, classical languages, and oral memories into a unified, interactive platform.
 
 ---
 
-## 🔥 5 Core SIH Innovations
+## 🔥 5 Core Innovation Pillars
 
 1. **🗺️ Cultural GIS (Interactive Geospatial Map)**:
    - Dynamic SVG map of India with clickable states and territories.
@@ -88,7 +88,7 @@ Then visit: `http://localhost:8080/`
 
 ---
 
-## 👨🎓 Author & Institution
+## 👨‍🎓 Author & Institution
 - **Product Name**: SANNIVESHAM
 - **Institution**: Sreenidhi Institute of Science and Technology (SNIST), Hyderabad
-- **Event**: Smart India Hackathon (SIH 2026)
+- **Live Deployment**: [https://sannivesham.github.io/sannivesham-heritage/](https://sannivesham.github.io/sannivesham-heritage/)

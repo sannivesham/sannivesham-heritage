@@ -1,4 +1,4 @@
-// 🪔 BHARATVERSE — Festival Calendar 2026
+// 🪔 SANNIVESHAM — Festival Calendar 2026
 import { FESTIVALS_CALENDAR } from "../data/festivalsData.js";
 
 export function renderFestivalCalendar(container) {
@@ -26,14 +26,14 @@ export function renderFestivalCalendar(container) {
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
         <!-- Header -->
-        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-xl">
           <div>
             <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Living Cultural Rhythms</span>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">India's Cultural Calendar 2026</h1>
             <p class="text-xs text-neutral-300 mt-1">Experience how astronomical cycles, agricultural harvests, and regional devotion weave a living festival continuum.</p>
           </div>
-          <div class="text-xs text-amber-300 bg-amber-500/10 px-3 py-1.5 rounded-xl border border-amber-500/20">
-            🗓️ Year: 2026 (Saka Era 1948)
+          <div class="text-xs text-amber-300 bg-amber-500/10 px-3.5 py-2 rounded-xl border border-amber-500/20 font-mono">
+            🗓️ Year 2026 (Saka Era 1948)
           </div>
         </div>
 
@@ -42,7 +42,7 @@ export function renderFestivalCalendar(container) {
           ${months.map(m => `
             <button 
               data-month="${m.num}" 
-              class="month-btn px-3.5 py-2 rounded-xl text-xs font-semibold border transition-all ${
+              class="month-btn h-10 px-4 rounded-xl text-xs font-semibold border transition-all flex items-center ${
                 selectedMonthNum === m.num 
                   ? 'bg-amber-500 text-neutral-950 border-amber-400 font-bold shadow-md shadow-amber-500/20' 
                   : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'
@@ -54,11 +54,11 @@ export function renderFestivalCalendar(container) {
         </div>
 
         <!-- Festival Cards Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           ${activeFestivals.map(fest => `
-            <div class="glass-panel-maroon rounded-3xl border border-amber-500/30 overflow-hidden shadow-xl flex flex-col justify-between group hover:border-amber-400 transition-all duration-300">
+            <div class="glass-panel-maroon heritage-card-glow rounded-3xl border border-amber-500/30 overflow-hidden shadow-xl flex flex-col justify-between h-full group hover:border-amber-400 transition-all duration-300">
               
-              <div class="relative h-56 overflow-hidden">
+              <div class="relative h-56 overflow-hidden shrink-0">
                 <img src="${fest.image}" alt="${fest.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"/>
                 <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent"></div>
                 <div class="absolute top-4 left-4 flex items-center space-x-2">

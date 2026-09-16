@@ -1,4 +1,4 @@
-// 🏛️ BHARATVERSE — State Cultural Profile (Dossier)
+// 🏛️ SANNIVESHAM — State Cultural Profile (Dossier)
 import { STATES_DATA } from "../data/heritageData.js";
 
 export function renderStateProfile(container, stateId = "telangana", onBack, onOpenStory) {
@@ -7,17 +7,17 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
   container.innerHTML = `
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
       
-      <!-- Back Navigation Bar -->
+      <!-- Back Navigation Bar (Standardized h-10) -->
       <div class="flex items-center justify-between">
-        <button id="state-back-btn" class="px-4 py-2 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 text-amber-200 border border-amber-500/30 text-xs font-semibold flex items-center space-x-2 transition-all">
+        <button id="state-back-btn" class="h-10 px-4 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 text-amber-200 border border-amber-500/30 text-xs font-semibold flex items-center space-x-2 transition-all shadow-sm">
           <span>←</span>
           <span>Back to Cultural Map</span>
         </button>
 
         <!-- Quick Switcher -->
         <div class="flex items-center space-x-2 text-xs">
-          <span class="text-neutral-400">Switch Region:</span>
-          <select id="state-select-dropdown" class="bg-neutral-900 border border-amber-500/30 rounded-lg px-2.5 py-1 text-amber-300 text-xs focus:outline-none focus:border-amber-400">
+          <span class="text-neutral-400 font-medium">Switch Region:</span>
+          <select id="state-select-dropdown" class="h-10 bg-neutral-900/90 border border-amber-500/30 rounded-xl px-3 text-amber-300 text-xs focus:outline-none focus:border-amber-400 cursor-pointer shadow-sm">
             <option value="telangana" ${stateId === 'telangana' ? 'selected' : ''}>Telangana (Spotlight)</option>
             <option value="rajasthan" ${stateId === 'rajasthan' ? 'selected' : ''}>Rajasthan</option>
             <option value="tamilnadu" ${stateId === 'tamilnadu' ? 'selected' : ''}>Tamil Nadu</option>
@@ -36,11 +36,11 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
         <div class="relative z-10 space-y-3 max-w-3xl">
           <div class="flex flex-wrap items-center gap-2">
             <span class="px-3 py-1 rounded-full bg-amber-500 text-neutral-950 font-bold text-xs uppercase tracking-wider">Capital: ${data.capital}</span>
-            <span class="px-3 py-1 rounded-full bg-rose-900/80 text-rose-200 border border-rose-500/40 text-xs">Deccan Heritage Hub</span>
+            <span class="px-3 py-1 rounded-full bg-rose-900/80 text-rose-200 border border-rose-500/40 text-xs">Cultural Heritage Dossier</span>
           </div>
           <h1 class="font-cinzel text-4xl sm:text-6xl font-black text-white tracking-tight">${data.name}</h1>
           <p class="font-playfair text-amber-300 text-lg sm:text-xl italic">${data.tagline}</p>
-          <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed max-w-2xl">${data.overview}</p>
+          <p class="text-xs sm:text-sm text-neutral-200 leading-relaxed max-w-2xl font-light">${data.overview}</p>
         </div>
       </div>
 
@@ -57,23 +57,25 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             ${data.heritageSites.map(site => `
-              <div class="glass-panel p-6 rounded-2xl border border-amber-500/20 hover:border-amber-400/50 transition-all space-y-3 group">
-                <div class="flex items-start justify-between">
-                  <div>
-                    <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase">${site.badge || site.era}</span>
-                    <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-300 transition-colors mt-1.5">${site.name}</h3>
-                    <p class="text-xs text-neutral-400 flex items-center space-x-1 mt-0.5">
-                      <span>📍 ${site.location}</span>
-                      <span>•</span>
-                      <span>${site.era}</span>
-                    </p>
+              <div class="glass-panel heritage-card-glow p-6 rounded-3xl border border-amber-500/20 hover:border-amber-400/50 transition-all flex flex-col justify-between h-full group">
+                <div class="space-y-3">
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <span class="text-[10px] font-semibold px-2 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30 uppercase">${site.badge || site.era}</span>
+                      <h3 class="font-cinzel text-xl font-bold text-white group-hover:text-amber-300 transition-colors mt-1.5">${site.name}</h3>
+                      <p class="text-xs text-neutral-400 flex items-center space-x-1 mt-0.5 font-mono">
+                        <span>📍 ${site.location}</span>
+                        <span>•</span>
+                        <span>${site.era}</span>
+                      </p>
+                    </div>
                   </div>
+                  <p class="text-xs text-neutral-300 leading-relaxed font-light">${site.desc}</p>
                 </div>
-                <p class="text-xs text-neutral-300 leading-relaxed">${site.desc}</p>
                 ${site.name.includes("Charminar") ? `
-                  <button id="open-charminar-story" class="mt-2 text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center space-x-1">
+                  <button id="open-charminar-story" class="mt-4 pt-3 border-t border-amber-500/20 text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center space-x-1 transition-colors">
                     <span>Read Full Scroll-Based Story</span>
                     <span>→</span>
                   </button>
@@ -93,15 +95,17 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             ${data.folkArts.map(art => `
-              <div class="glass-panel-maroon p-6 rounded-2xl border border-rose-500/30 space-y-3">
-                <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-xl">
-                  ${art.icon || "🎭"}
+              <div class="glass-panel-maroon heritage-card-glow p-6 rounded-3xl border border-rose-500/30 flex flex-col justify-between h-full space-y-3">
+                <div class="space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center text-xl">
+                    ${art.icon || "🎭"}
+                  </div>
+                  <h3 class="font-cinzel text-lg font-bold text-white">${art.name}</h3>
+                  <span class="inline-block text-[10px] font-semibold text-amber-300 bg-black/40 px-2 py-0.5 rounded border border-amber-500/20">${art.type}</span>
+                  <p class="text-xs text-neutral-300 leading-relaxed font-light">${art.desc}</p>
                 </div>
-                <h3 class="font-cinzel text-lg font-bold text-white">${art.name}</h3>
-                <span class="text-[10px] font-semibold text-amber-300 bg-black/40 px-2 py-0.5 rounded">${art.type}</span>
-                <p class="text-xs text-neutral-300 leading-relaxed">${art.desc}</p>
               </div>
             `).join('')}
           </div>
@@ -117,16 +121,18 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             ${data.handicrafts.map(craft => `
-              <div class="glass-panel p-6 rounded-2xl border border-amber-500/20 space-y-3">
-                <div class="flex items-center justify-between">
-                  <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/30">${craft.tag}</span>
-                  <span class="text-xs text-neutral-400">📍 ${craft.location}</span>
+              <div class="glass-panel heritage-card-glow p-6 rounded-3xl border border-amber-500/20 flex flex-col justify-between h-full space-y-3">
+                <div class="space-y-2">
+                  <div class="flex items-center justify-between">
+                    <span class="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-500/30">${craft.tag}</span>
+                    <span class="text-xs text-neutral-400">📍 ${craft.location}</span>
+                  </div>
+                  <h3 class="font-cinzel text-lg font-bold text-white">${craft.name}</h3>
+                  <p class="text-[11px] text-amber-300 font-medium">${craft.type}</p>
+                  <p class="text-xs text-neutral-300 leading-relaxed font-light">${craft.desc}</p>
                 </div>
-                <h3 class="font-cinzel text-lg font-bold text-white">${craft.name}</h3>
-                <p class="text-[11px] text-amber-300">${craft.type}</p>
-                <p class="text-xs text-neutral-300 leading-relaxed">${craft.desc}</p>
               </div>
             `).join('')}
           </div>
@@ -142,13 +148,15 @@ export function renderStateProfile(container, stateId = "telangana", onBack, onO
             </div>
           </div>
 
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
             ${data.festivals.map(fest => `
-              <div class="glass-panel p-6 rounded-2xl border border-amber-500/20 space-y-3">
-                <div class="text-2xl">${fest.symbol || "🪔"}</div>
-                <h3 class="font-cinzel text-lg font-bold text-white">${fest.name}</h3>
-                <span class="text-[10px] text-amber-300/80 bg-neutral-900 px-2 py-0.5 rounded">${fest.season}</span>
-                <p class="text-xs text-neutral-300 leading-relaxed">${fest.desc}</p>
+              <div class="glass-panel heritage-card-glow p-6 rounded-3xl border border-amber-500/20 flex flex-col justify-between h-full space-y-3">
+                <div class="space-y-2">
+                  <div class="text-2xl">${fest.symbol || "🪔"}</div>
+                  <h3 class="font-cinzel text-lg font-bold text-white">${fest.name}</h3>
+                  <span class="inline-block text-[10px] text-amber-300/80 bg-neutral-900 px-2 py-0.5 rounded border border-amber-500/20">${fest.season}</span>
+                  <p class="text-xs text-neutral-300 leading-relaxed font-light">${fest.desc}</p>
+                </div>
               </div>
             `).join('')}
           </div>

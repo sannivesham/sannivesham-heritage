@@ -1,4 +1,4 @@
-// 🗺️ BHARATVERSE — Cultural GIS: Interactive Cultural Map of India
+// 🗺️ SANNIVESHAM — Cultural GIS: Interactive Cultural Map of India
 import { STATES_DATA } from "../data/heritageData.js";
 
 export function renderCulturalMap(container, onSelectState, activeStateId = "telangana") {
@@ -6,36 +6,36 @@ export function renderCulturalMap(container, onSelectState, activeStateId = "tel
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
       
       <!-- Top Header & Layer Filter Bar -->
-      <div class="glass-panel p-6 rounded-3xl border border-amber-500/30">
+      <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 shadow-xl">
         <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Geospatial Heritage</span>
-              <span class="text-xs text-neutral-400">Interactive Geospatial Layer</span>
+              <span class="text-xs text-neutral-400">Interactive Spatial Engine</span>
             </div>
-            <h1 class="font-cinzel text-2xl sm:text-4xl font-bold text-white mt-1">Cultural GIS Map of Bharat</h1>
+            <h1 class="font-cinzel text-2xl sm:text-4xl font-bold text-white mt-1">Cultural GIS Map of India</h1>
             <p class="text-xs sm:text-sm text-neutral-300 mt-1">Explore India's tangible and living heritage geographically. Select layers to map traditions across states.</p>
           </div>
 
-          <!-- Cultural GIS Layer Toggles -->
-          <div class="flex flex-wrap items-center gap-2 bg-neutral-950/70 p-1.5 rounded-2xl border border-amber-500/20" id="map-layer-toggles">
-            <button data-layer="all" class="layer-btn active px-3 py-1.5 rounded-xl text-xs font-semibold bg-amber-500 text-neutral-950 transition-all">
-              🌐 All Layers
+          <!-- Cultural GIS Layer Toggles (Standardized h-9) -->
+          <div class="flex flex-wrap items-center gap-2 bg-neutral-950/80 p-1.5 rounded-2xl border border-amber-500/20" id="map-layer-toggles">
+            <button data-layer="all" class="layer-btn active h-9 px-3.5 rounded-xl text-xs font-semibold bg-amber-500 text-neutral-950 transition-all flex items-center space-x-1.5 shadow-sm">
+              <span>🌐 All Dimensions</span>
             </button>
-            <button data-layer="monuments" class="layer-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all">
-              🏛️ Heritage Sites
+            <button data-layer="monuments" class="layer-btn h-9 px-3.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all flex items-center space-x-1.5">
+              <span>🏛️ Monuments</span>
             </button>
-            <button data-layer="dance" class="layer-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all">
-              🎭 Performing Arts
+            <button data-layer="dance" class="layer-btn h-9 px-3.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all flex items-center space-x-1.5">
+              <span>🎭 Performing Arts</span>
             </button>
-            <button data-layer="crafts" class="layer-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all">
-              🧵 Traditional Crafts
+            <button data-layer="crafts" class="layer-btn h-9 px-3.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all flex items-center space-x-1.5">
+              <span>🧵 GI Crafts</span>
             </button>
-            <button data-layer="festivals" class="layer-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all">
-              🪔 Festivals
+            <button data-layer="festivals" class="layer-btn h-9 px-3.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all flex items-center space-x-1.5">
+              <span>🪔 Festivals</span>
             </button>
-            <button data-layer="languages" class="layer-btn px-3 py-1.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all">
-              🗣️ Languages
+            <button data-layer="languages" class="layer-btn h-9 px-3.5 rounded-xl text-xs font-semibold text-neutral-300 hover:text-white hover:bg-neutral-800 transition-all flex items-center space-x-1.5">
+              <span>🗣️ Languages</span>
             </button>
           </div>
         </div>
@@ -213,44 +213,44 @@ export function renderCulturalMap(container, onSelectState, activeStateId = "tel
     }
 
     statePreviewContainer.innerHTML = `
-      <div class="glass-panel-maroon p-6 rounded-3xl border border-amber-500/40 shadow-2xl space-y-6">
+      <div class="glass-panel-maroon heritage-card-glow p-6 rounded-3xl border border-amber-500/40 shadow-2xl space-y-6">
         
         <!-- Header & Image -->
         <div class="relative rounded-2xl overflow-hidden border border-amber-500/30 aspect-video shadow-lg">
           <img src="${data.bannerImage}" alt="${data.name}" class="w-full h-full object-cover"/>
           <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent"></div>
           <div class="absolute bottom-3 left-3 right-3">
-            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-amber-500/80 text-neutral-950">Capital: ${data.capital}</span>
+            <span class="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-amber-500/90 text-neutral-950 tracking-wider">Capital: ${data.capital}</span>
             <h2 class="font-cinzel text-2xl font-bold text-white mt-1">${data.name}</h2>
             <p class="text-[11px] text-amber-200/90 line-clamp-1">${data.tagline}</p>
           </div>
         </div>
 
         <!-- Overview -->
-        <p class="text-xs text-neutral-300 leading-relaxed">${data.overview}</p>
+        <p class="text-xs text-neutral-300 leading-relaxed font-light">${data.overview}</p>
 
         <!-- Cultural Dimensions Grid -->
         <div class="grid grid-cols-2 gap-2 text-xs">
-          <div class="p-2.5 rounded-xl bg-neutral-900/60 border border-amber-500/20">
+          <div class="p-2.5 rounded-xl bg-neutral-900/70 border border-amber-500/20 shadow-inner">
             <p class="text-neutral-400 text-[10px]">🏛 Heritage Sites</p>
-            <p class="font-bold text-amber-300 mt-0.5">${data.heritageSites ? data.heritageSites[0].name : "Multiple Monuments"}</p>
+            <p class="font-bold text-amber-300 mt-0.5 leading-tight">${data.heritageSites ? data.heritageSites[0].name : "Multiple Monuments"}</p>
           </div>
-          <div class="p-2.5 rounded-xl bg-neutral-900/60 border border-amber-500/20">
+          <div class="p-2.5 rounded-xl bg-neutral-900/70 border border-amber-500/20 shadow-inner">
             <p class="text-neutral-400 text-[10px]">🎭 Living Folk Arts</p>
-            <p class="font-bold text-amber-300 mt-0.5">${data.folkArts ? data.folkArts[0].name : "Classical Dances"}</p>
+            <p class="font-bold text-amber-300 mt-0.5 leading-tight">${data.folkArts ? data.folkArts[0].name : "Classical Dances"}</p>
           </div>
-          <div class="p-2.5 rounded-xl bg-neutral-900/60 border border-amber-500/20">
+          <div class="p-2.5 rounded-xl bg-neutral-900/70 border border-amber-500/20 shadow-inner">
             <p class="text-neutral-400 text-[10px]">🧵 GI Handicrafts</p>
-            <p class="font-bold text-amber-300 mt-0.5">${data.handicrafts ? data.handicrafts[0].name : "Textile Traditions"}</p>
+            <p class="font-bold text-amber-300 mt-0.5 leading-tight">${data.handicrafts ? data.handicrafts[0].name : "Textile Traditions"}</p>
           </div>
-          <div class="p-2.5 rounded-xl bg-neutral-900/60 border border-amber-500/20">
+          <div class="p-2.5 rounded-xl bg-neutral-900/70 border border-amber-500/20 shadow-inner">
             <p class="text-neutral-400 text-[10px]">🪔 Iconic Festival</p>
-            <p class="font-bold text-amber-300 mt-0.5">${data.festivals ? data.festivals[0].name : "State Celebrations"}</p>
+            <p class="font-bold text-amber-300 mt-0.5 leading-tight">${data.festivals ? data.festivals[0].name : "State Celebrations"}</p>
           </div>
         </div>
 
         <!-- Call to Action -->
-        <button id="open-full-state-profile-btn" class="w-full py-3 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold text-sm shadow-xl shadow-amber-500/20 transition-all flex items-center justify-center space-x-2">
+        <button id="open-full-state-profile-btn" class="btn-shimmer w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-neutral-950 font-bold text-sm shadow-xl shadow-amber-500/20 hover:scale-[1.02] active:scale-98 transition-all flex items-center justify-center space-x-2">
           <span>Explore Complete ${data.name} Profile</span>
           <span>→</span>
         </button>

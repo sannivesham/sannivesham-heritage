@@ -68,7 +68,7 @@ export function renderVoicesOfBharat(container, onContribute) {
         <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>
             <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 uppercase tracking-wider">Living Memory Archive</span>
-            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Voices of Bharat</h1>
+            <h1 class="font-cinzel text-3xl sm:text-4xl font-bold text-white mt-1">Voices of Heritage</h1>
             <p class="text-xs text-neutral-300 mt-1">Unfiltered oral histories recorded from village elders, master weavers, folk artists, and oral lineage keepers.</p>
           </div>
           <button id="contribute-story-btn" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs shadow-lg shadow-amber-500/20 transition-all flex items-center space-x-2">

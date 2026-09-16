@@ -148,11 +148,11 @@ export function renderLanguageExplorer(container) {
               <thead>
                 <tr class="border-b border-amber-500/20 text-neutral-400 uppercase text-[10px] tracking-wider">
                   <th class="py-3 px-4">Concept</th>
-                  <th class="py-3 px-4">Hindi (Devanagari)</th>
-                  <th class="py-3 px-4">Telugu (తెలుగు)</th>
-                  <th class="py-3 px-4">Kannada (ಕನ್ನಡ)</th>
-                  <th class="py-3 px-4">Tamil (தமிழ்)</th>
-                  <th class="py-3 px-4">Bengali (বাংলা)</th>
+                  <th class="py-3 px-4">Hindi</th>
+                  <th class="py-3 px-4">Telugu</th>
+                  <th class="py-3 px-4">Kannada</th>
+                  <th class="py-3 px-4">Tamil</th>
+                  <th class="py-3 px-4">Bengali</th>
                   <th class="py-3 px-4">Audio</th>
                 </tr>
               </thead>

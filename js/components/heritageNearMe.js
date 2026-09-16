@@ -1,4 +1,4 @@
-// 📍 BHARATVERSE — Heritage Near Me: Location-Based Cultural Discovery
+// 📍 SANNIVESHAM — Heritage Near Me: Location-Based Cultural Discovery
 export function renderHeritageNearMe(container) {
   let currentRadius = 15; // km
   let currentCategory = "all";
@@ -58,22 +58,12 @@ export function renderHeritageNearMe(container) {
     {
       name: "State Central Library & Oriental Manuscripts",
       category: "library",
-      distanceKm: 4.0,
-      eta: "15 mins",
-      address: "Afzal Gunj, High Court Rd, Hyderabad",
+      distanceKm: 5.2,
+      eta: "19 mins",
+      address: "Afzal Gunj, Hyderabad",
       icon: "📚",
-      type: "Heritage Library (1891 CE)",
-      desc: "Houses over 500,000 rare books and palm-leaf manuscripts in Telugu, Sanskrit, Persian, and Urdu."
-    },
-    {
-      name: "Pochampally Handloom Weavers Cluster",
-      category: "artisan",
-      distanceKm: 38.0,
-      eta: "55 mins",
-      address: "Bhuvanagiri District",
-      icon: "🧵",
-      type: "GI Double Ikat Weaving Village",
-      desc: "UNWTO recognized Best Tourism Village where over 2,000 master weavers craft pure mulberry and silk Ikat."
+      type: "Heritage Public Library & Archive",
+      desc: "Architectural masterpiece on the Musi river housing over 500,000 historic books and rare palm-leaf manuscripts."
     }
   ];
 
@@ -92,7 +82,7 @@ export function renderHeritageNearMe(container) {
       <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
         <!-- Header & Radius Controls -->
-        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-xl">
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Hyperlocal Heritage</span>
@@ -102,42 +92,42 @@ export function renderHeritageNearMe(container) {
             <p class="text-xs text-neutral-300 mt-1">Discover monuments, artisan workshops, and cultural theatres within your reach in <strong class="text-amber-300">${userLocation}</strong>.</p>
           </div>
 
-          <!-- Radius Slider / Selector -->
-          <div class="flex items-center space-x-3 bg-neutral-900/80 p-2 rounded-2xl border border-amber-500/20">
+          <!-- Radius Selector (Standardized h-10) -->
+          <div class="flex items-center space-x-2 bg-neutral-900/80 p-1.5 rounded-2xl border border-amber-500/20 shadow-inner">
             <span class="text-xs text-neutral-400 font-semibold pl-2">Radius:</span>
-            <button data-rad="5" class="rad-btn px-3 py-1 rounded-xl text-xs font-bold ${currentRadius === 5 ? 'bg-amber-500 text-neutral-950' : 'text-neutral-300 hover:bg-neutral-800'}">5 km</button>
-            <button data-rad="15" class="rad-btn px-3 py-1 rounded-xl text-xs font-bold ${currentRadius === 15 ? 'bg-amber-500 text-neutral-950' : 'text-neutral-300 hover:bg-neutral-800'}">15 km</button>
-            <button data-rad="50" class="rad-btn px-3 py-1 rounded-xl text-xs font-bold ${currentRadius === 50 ? 'bg-amber-500 text-neutral-950' : 'text-neutral-300 hover:bg-neutral-800'}">50 km</button>
+            <button data-rad="5" class="rad-btn h-8 px-3.5 rounded-xl text-xs font-bold transition-all ${currentRadius === 5 ? 'bg-amber-500 text-neutral-950 shadow-sm' : 'text-neutral-300 hover:bg-neutral-800'}">5 km</button>
+            <button data-rad="15" class="rad-btn h-8 px-3.5 rounded-xl text-xs font-bold transition-all ${currentRadius === 15 ? 'bg-amber-500 text-neutral-950 shadow-sm' : 'text-neutral-300 hover:bg-neutral-800'}">15 km</button>
+            <button data-rad="50" class="rad-btn h-8 px-3.5 rounded-xl text-xs font-bold transition-all ${currentRadius === 50 ? 'bg-amber-500 text-neutral-950 shadow-sm' : 'text-neutral-300 hover:bg-neutral-800'}">50 km</button>
           </div>
         </div>
 
         <!-- Category Filters -->
         <div class="flex flex-wrap gap-2 text-xs">
-          <button data-cat="all" class="cat-btn px-3.5 py-1.5 rounded-xl font-semibold border ${currentCategory === 'all' ? 'bg-amber-500/20 text-amber-300 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🌐 All Nearby (${NEARBY_DATA.filter(i => i.distanceKm <= currentRadius).length})
+          <button data-cat="all" class="cat-btn h-9 px-3.5 rounded-xl font-semibold border transition-all flex items-center ${currentCategory === 'all' ? 'bg-amber-500/20 text-amber-300 border-amber-400 shadow-sm' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🌐 All Nearby (${NEARBY_DATA.filter(i => i.distanceKm <= currentRadius).length})</span>
           </button>
-          <button data-cat="monument" class="cat-btn px-3.5 py-1.5 rounded-xl font-semibold border ${currentCategory === 'monument' ? 'bg-amber-500/20 text-amber-300 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🏛️ Heritage Monuments
+          <button data-cat="monument" class="cat-btn h-9 px-3.5 rounded-xl font-semibold border transition-all flex items-center ${currentCategory === 'monument' ? 'bg-amber-500/20 text-amber-300 border-amber-400 shadow-sm' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🏛️ Heritage Monuments</span>
           </button>
-          <button data-cat="artisan" class="cat-btn px-3.5 py-1.5 rounded-xl font-semibold border ${currentCategory === 'artisan' ? 'bg-amber-500/20 text-amber-300 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🎨 Artisan Workshops
+          <button data-cat="artisan" class="cat-btn h-9 px-3.5 rounded-xl font-semibold border transition-all flex items-center ${currentCategory === 'artisan' ? 'bg-amber-500/20 text-amber-300 border-amber-400 shadow-sm' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🎨 Artisan Workshops</span>
           </button>
-          <button data-cat="cultural" class="cat-btn px-3.5 py-1.5 rounded-xl font-semibold border ${currentCategory === 'cultural' ? 'bg-amber-500/20 text-amber-300 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            🎭 Cultural Theatres
+          <button data-cat="cultural" class="cat-btn h-9 px-3.5 rounded-xl font-semibold border transition-all flex items-center ${currentCategory === 'cultural' ? 'bg-amber-500/20 text-amber-300 border-amber-400 shadow-sm' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>🎭 Cultural Theatres</span>
           </button>
-          <button data-cat="library" class="cat-btn px-3.5 py-1.5 rounded-xl font-semibold border ${currentCategory === 'library' ? 'bg-amber-500/20 text-amber-300 border-amber-400' : 'glass-panel text-neutral-300 border-amber-500/20'}">
-            📚 Heritage Libraries
+          <button data-cat="library" class="cat-btn h-9 px-3.5 rounded-xl font-semibold border transition-all flex items-center ${currentCategory === 'library' ? 'bg-amber-500/20 text-amber-300 border-amber-400 shadow-sm' : 'glass-panel text-neutral-300 border-amber-500/20 hover:border-amber-400/60'}">
+            <span>📚 Heritage Libraries</span>
           </button>
         </div>
 
-        <!-- Nearby Items Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Nearby Items Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
           ${items.map(item => `
-            <div class="glass-panel p-6 rounded-3xl border border-amber-500/20 hover:border-amber-400 transition-all flex flex-col justify-between space-y-4 group">
+            <div class="glass-panel heritage-card-glow p-6 rounded-3xl border border-amber-500/20 hover:border-amber-400 transition-all flex flex-col justify-between h-full space-y-4 group">
               <div>
                 <div class="flex items-center justify-between">
                   <span class="text-2xl">${item.icon}</span>
-                  <div class="flex items-center space-x-1.5 text-xs font-bold text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20">
+                  <div class="flex items-center space-x-1.5 text-xs font-bold text-amber-300 bg-amber-500/10 px-2.5 py-0.5 rounded-full border border-amber-500/20 font-mono">
                     <span>📍 ${item.distanceKm} km</span>
                     <span>•</span>
                     <span>${item.eta}</span>

@@ -1,4 +1,4 @@
-// 🎮 BHARATVERSE — Culture Quest: Gamified Learning Engine
+// 🎮 SANNIVESHAM — Culture Quest: Gamified Learning Engine
 import { QUEST_LEVELS, QUEST_QUESTIONS, BADGES_DATA } from "../data/questQuestions.js";
 
 // Web Audio API helper for zero-dependency retro Indian victory and tone SFX
@@ -56,11 +56,11 @@ export function renderCultureQuest(container, state, onUpdateXp) {
       <section class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
         
         <!-- Header & Stats Bar -->
-        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="glass-panel p-6 rounded-3xl border border-amber-500/30 flex flex-col md:flex-row md:items-center md:justify-between gap-4 shadow-xl">
           <div>
             <div class="flex items-center space-x-2">
               <span class="text-xs font-semibold px-2.5 py-0.5 rounded bg-amber-500/20 text-amber-300 uppercase tracking-wider">Gamified Learning</span>
-              <span class="text-xs text-neutral-400">Gamified Learning System</span>
+              <span class="text-xs text-neutral-400">Interactive Knowledge Challenges</span>
             </div>
             <h1 class="font-cinzel text-3xl sm:text-4xl font-black text-white mt-1">CULTURE QUEST</h1>
             <p class="text-xs text-neutral-300">Level up your cultural wisdom. Learn through challenges, earn Culture XP, and claim digital heritage badges.</p>
@@ -84,29 +84,32 @@ export function renderCultureQuest(container, state, onUpdateXp) {
         </div>
 
         <!-- Level Selector Carousel -->
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 items-stretch">
           ${QUEST_LEVELS.map(lvl => {
             const isUnlocked = state.userXp >= lvl.requiredXp;
             const isSelected = lvl.level === selectedLevel;
             return `
               <button 
                 data-level="${lvl.level}" 
-                class="level-card p-4 rounded-2xl border text-left transition-all relative overflow-hidden ${
+                class="level-card heritage-card-glow p-4 rounded-2xl border text-left transition-all relative overflow-hidden flex flex-col justify-between h-full ${
                   isSelected 
-                    ? 'bg-gradient-to-b from-amber-900/60 to-rose-950/70 border-amber-400 shadow-xl shadow-amber-500/20 scale-105' 
+                    ? 'bg-gradient-to-b from-amber-900/60 to-rose-950/70 border-amber-400 shadow-xl shadow-amber-500/20 scale-[1.03]' 
                     : isUnlocked 
                       ? 'glass-panel border-amber-500/30 hover:border-amber-400/60' 
                       : 'opacity-50 glass-panel border-neutral-800 cursor-not-allowed'
                 }"
               >
-                <div class="flex items-center justify-between text-xl mb-2">
-                  <span>${lvl.icon}</span>
-                  <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${isUnlocked ? 'bg-emerald-950 text-emerald-300 border border-emerald-500/30' : 'bg-neutral-800 text-neutral-400'}">
-                    ${isUnlocked ? 'UNLOCKED' : `LOCKED (${lvl.requiredXp} XP)`}
-                  </span>
+                <div>
+                  <div class="flex items-center justify-between text-xl mb-2">
+                    <span>${lvl.icon}</span>
+                    <span class="text-[10px] font-bold px-1.5 py-0.5 rounded ${isUnlocked ? 'bg-emerald-950 text-emerald-300 border border-emerald-500/30' : 'bg-neutral-800 text-neutral-400'}">
+                      ${isUnlocked ? 'UNLOCKED' : `LOCKED`}
+                    </span>
+                  </div>
+                  <p class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Level ${lvl.level}</p>
+                  <p class="font-cinzel text-xs font-bold text-white leading-tight mt-0.5">${lvl.title}</p>
                 </div>
-                <p class="text-[11px] text-amber-400 font-bold uppercase tracking-wider">Level ${lvl.level}</p>
-                <p class="font-cinzel text-xs font-bold text-white leading-tight mt-0.5">${lvl.title}</p>
+                <p class="text-[10px] text-neutral-400 mt-2">${lvl.requiredXp} XP Req</p>
               </button>
             `;
           }).join('')}
@@ -118,7 +121,7 @@ export function renderCultureQuest(container, state, onUpdateXp) {
           <!-- Question Category & Number -->
           <div class="flex items-center justify-between text-xs text-amber-300 border-b border-amber-500/20 pb-3">
             <span class="font-semibold uppercase tracking-wider">Level ${selectedLevel}: ${currentLevelObj.title} • Q${currentQuestionIdx + 1}/${questions.length}</span>
-            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold">+${currentQ.xp} XP Challenge</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300 font-bold border border-amber-500/30">+${currentQ.xp} XP Challenge</span>
           </div>
 
           <!-- Question Prompt -->
@@ -129,8 +132,8 @@ export function renderCultureQuest(container, state, onUpdateXp) {
             </h2>
           </div>
 
-          <!-- Options Grid -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Options Grid (Standardized min-height) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
             ${currentQ.options.map(opt => {
               let btnClass = "glass-panel border-amber-500/30 hover:border-amber-400 text-neutral-200";
               let badgeClass = "bg-neutral-900 text-amber-300 border-neutral-700";
@@ -149,10 +152,10 @@ export function renderCultureQuest(container, state, onUpdateXp) {
                 <button 
                   data-key="${opt.key}" 
                   ${answeredState ? 'disabled' : ''} 
-                  class="option-btn p-4 rounded-2xl border text-left flex items-center space-x-3 transition-all ${btnClass} ${answeredState ? 'cursor-default' : 'hover:scale-[1.02] active:scale-98'}"
+                  class="option-btn min-h-[64px] p-4 rounded-2xl border text-left flex items-center space-x-3 transition-all ${btnClass} ${answeredState ? 'cursor-default' : 'hover:scale-[1.02] active:scale-98'}"
                 >
                   <span class="w-8 h-8 rounded-xl border flex items-center justify-center font-bold text-xs shrink-0 ${badgeClass}">${opt.key}</span>
-                  <span class="text-xs sm:text-sm font-medium">${opt.text}</span>
+                  <span class="text-xs sm:text-sm font-medium leading-snug">${opt.text}</span>
                 </button>
               `;
             }).join('')}

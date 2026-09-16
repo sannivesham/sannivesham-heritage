@@ -19,50 +19,50 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
           </div>
 
           <!-- Center: Perfectly Aligned Desktop Dropdown Navigation -->
-          <nav class="hidden lg:flex items-center space-x-2 font-medium text-sm">
+          <nav class="hidden lg:flex items-center space-x-1 xl:space-x-1.5 font-medium text-xs">
             
             <!-- Home -->
-            <button data-nav="home" class="nav-direct-link px-3.5 py-2 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/60 transition-all ${state.currentView === 'home' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/40' : ''}">
-              Home
+            <button data-nav="home" class="nav-direct-link h-10 px-3.5 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/70 transition-all flex items-center space-x-1.5 font-semibold uppercase tracking-wider ${state.currentView === 'home' ? 'bg-amber-500/20 text-amber-300 border border-amber-500/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'border border-transparent'}">
+              <span>Home</span>
             </button>
 
             <!-- 1. Explore Dropdown -->
             <div class="nav-dropdown">
-              <button class="px-3.5 py-2 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/60 transition-all flex items-center space-x-1 ${['map', 'explorer', 'stateProfile', 'languages', 'festivals'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/15 border border-amber-500/30' : ''}">
+              <button class="h-10 px-3.5 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/70 transition-all flex items-center space-x-1.5 font-semibold uppercase tracking-wider ${['map', 'explorer', 'stateProfile', 'languages', 'festivals'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/20 border border-amber-500/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'border border-transparent'}">
                 <span>Explore</span>
                 <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="nav-dropdown-menu">
                 <button data-nav="map" class="dropdown-item w-full text-left">
-                  <span>🗺️</span>
+                  <span class="text-lg">🗺️</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Cultural GIS Map</p>
                     <p class="text-[10px] text-neutral-400">Interactive layers across India</p>
                   </div>
                 </button>
                 <button data-nav="explorer" class="dropdown-item w-full text-left">
-                  <span>🏛️</span>
+                  <span class="text-lg">🏛️</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Heritage Explorer</p>
                     <p class="text-[10px] text-neutral-400">Filter monuments, arts, crafts</p>
                   </div>
                 </button>
                 <button data-nav="stateProfile" class="dropdown-item w-full text-left">
-                  <span>🌟</span>
+                  <span class="text-lg">🌟</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">State Cultural Profiles</p>
                     <p class="text-[10px] text-neutral-400">Telangana, Rajasthan & more</p>
                   </div>
                 </button>
                 <button data-nav="languages" class="dropdown-item w-full text-left">
-                  <span>🗣️</span>
+                  <span class="text-lg">🗣️</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Languages & Scripts</p>
                     <p class="text-[10px] text-neutral-400">Compare scripts with audio</p>
                   </div>
                 </button>
                 <button data-nav="festivals" class="dropdown-item w-full text-left">
-                  <span>🪔</span>
+                  <span class="text-lg">🪔</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Cultural Calendar</p>
                     <p class="text-[10px] text-neutral-400">Seasonal festival almanac</p>
@@ -73,41 +73,41 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
 
             <!-- 2. Experience Dropdown -->
             <div class="nav-dropdown">
-              <button class="px-3.5 py-2 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/60 transition-all flex items-center space-x-1 ${['stories', 'quest', 'bharatai', 'virtualtour', 'voices'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/15 border border-amber-500/30' : ''}">
+              <button class="h-10 px-3.5 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/70 transition-all flex items-center space-x-1.5 font-semibold uppercase tracking-wider ${['stories', 'quest', 'bharatai', 'virtualtour', 'voices'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/20 border border-amber-500/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'border border-transparent'}">
                 <span>Experience</span>
                 <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="nav-dropdown-menu">
                 <button data-nav="stories" class="dropdown-item w-full text-left">
-                  <span>📖</span>
+                  <span class="text-lg">📖</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Stories of India</p>
                     <p class="text-[10px] text-neutral-400">Scroll storytelling (Charminar)</p>
                   </div>
                 </button>
                 <button data-nav="quest" class="dropdown-item w-full text-left">
-                  <span>🎮</span>
+                  <span class="text-lg">🎮</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Culture Quest</p>
                     <p class="text-[10px] text-neutral-400">Gamified levels & challenges</p>
                   </div>
                 </button>
                 <button data-nav="bharatai" class="dropdown-item w-full text-left">
-                  <span>🤖</span>
+                  <span class="text-lg">🤖</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Sannivesham AI</p>
                     <p class="text-[10px] text-neutral-400">Source-backed cultural guide</p>
                   </div>
                 </button>
                 <button data-nav="virtualtour" class="dropdown-item w-full text-left">
-                  <span>🏛️</span>
+                  <span class="text-lg">🏛️</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">360° Virtual Tours</p>
                     <p class="text-[10px] text-neutral-400">Panoramic walk through Hampi</p>
                   </div>
                 </button>
                 <button data-nav="voices" class="dropdown-item w-full text-left">
-                  <span>🎙️</span>
+                  <span class="text-lg">🎙️</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Voices of Heritage</p>
                     <p class="text-[10px] text-neutral-400">Living elder audio histories</p>
@@ -118,27 +118,27 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
 
             <!-- 3. Learn Dropdown -->
             <div class="nav-dropdown">
-              <button class="px-3.5 py-2 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/60 transition-all flex items-center space-x-1 ${['student', 'leaderboard', 'institution'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/15 border border-amber-500/30' : ''}">
+              <button class="h-10 px-3.5 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/70 transition-all flex items-center space-x-1.5 font-semibold uppercase tracking-wider ${['student', 'leaderboard', 'institution'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/20 border border-amber-500/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'border border-transparent'}">
                 <span>Learn</span>
                 <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="nav-dropdown-menu">
                 <button data-nav="student" class="dropdown-item w-full text-left">
-                  <span>🎓</span>
+                  <span class="text-lg">🎓</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Student 5-Day Journey</p>
                     <p class="text-[10px] text-neutral-400">Personalized pathway planner</p>
                   </div>
                 </button>
                 <button data-nav="leaderboard" class="dropdown-item w-full text-left">
-                  <span>🏆</span>
+                  <span class="text-lg">🏆</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Leaderboard & Badges</p>
                     <p class="text-[10px] text-neutral-400">College and scholar rankings</p>
                   </div>
                 </button>
                 <button data-nav="institution" class="dropdown-item w-full text-left">
-                  <span>🏫</span>
+                  <span class="text-lg">🏫</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Teacher Dashboard</p>
                     <p class="text-[10px] text-neutral-400">Assignments & field grading</p>
@@ -147,29 +147,29 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
               </div>
             </div>
 
-            <!-- 4. Community Dropdown -->
+            <!-- 4. Preserve Dropdown -->
             <div class="nav-dropdown">
-              <button class="px-3.5 py-2 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/60 transition-all flex items-center space-x-1 ${['community', 'nearme', 'alert'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/15 border border-amber-500/30' : ''}">
+              <button class="h-10 px-3.5 rounded-xl text-neutral-200 hover:text-amber-300 hover:bg-neutral-800/70 transition-all flex items-center space-x-1.5 font-semibold uppercase tracking-wider ${['community', 'nearme', 'alert'].includes(state.currentView) ? 'text-amber-300 bg-amber-500/20 border border-amber-500/50 shadow-[0_0_15px_rgba(212,175,55,0.2)]' : 'border border-transparent'}">
                 <span>Preserve</span>
                 <svg class="w-3.5 h-3.5 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </button>
               <div class="nav-dropdown-menu">
                 <button data-nav="community" class="dropdown-item w-full text-left">
-                  <span>🧑🤝🧑</span>
+                  <span class="text-lg">🧑🤝🧑</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">My Heritage Archive</p>
                     <p class="text-[10px] text-neutral-400">Submit elder memories & lore</p>
                   </div>
                 </button>
                 <button data-nav="nearme" class="dropdown-item w-full text-left">
-                  <span>📍</span>
+                  <span class="text-lg">📍</span>
                   <div>
                     <p class="font-semibold text-white leading-tight">Heritage Near Me</p>
                     <p class="text-[10px] text-neutral-400">Hyperlocal geo-radius discovery</p>
                   </div>
                 </button>
                 <button data-nav="alert" class="dropdown-item w-full text-left">
-                  <span>🚨</span>
+                  <span class="text-lg">🚨</span>
                   <div>
                     <p class="font-semibold text-rose-300 leading-tight">Heritage Alert</p>
                     <p class="text-[10px] text-neutral-400">Report endangered monuments</p>
@@ -180,31 +180,31 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
 
           </nav>
 
-          <!-- Right Action Bar: Search, XP Counter, Alert, Profile -->
-          <div class="flex items-center space-x-3">
+          <!-- Right Action Bar: Search, XP Counter, Alert, Profile (Unified h-10 heights) -->
+          <div class="flex items-center space-x-2 sm:space-x-2.5">
             
             <!-- Global Search Trigger -->
-            <button id="search-trigger-btn" class="p-2.5 rounded-xl bg-neutral-900/80 hover:bg-neutral-800 border border-amber-500/30 text-amber-200 transition-colors flex items-center space-x-2 text-xs">
+            <button id="search-trigger-btn" class="h-10 px-3 sm:px-3.5 rounded-xl bg-neutral-900/90 hover:bg-neutral-800 border border-amber-500/30 hover:border-amber-400 text-amber-200 transition-all flex items-center space-x-2 text-xs shadow-sm">
               <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-              <span class="hidden xl:inline text-neutral-400">Search Heritage...</span>
-              <kbd class="hidden xl:inline px-1.5 py-0.5 text-[10px] bg-neutral-800 rounded border border-neutral-700 text-neutral-400">⌘K</kbd>
+              <span class="hidden xl:inline text-neutral-300">Search Heritage...</span>
+              <kbd class="hidden xl:inline px-1.5 py-0.5 text-[10px] bg-neutral-800 rounded border border-neutral-700 text-neutral-400 font-mono">⌘K</kbd>
             </button>
 
             <!-- Culture XP Pill -->
-            <div class="hidden sm:flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-950/70 to-rose-950/70 border border-amber-500/40 shadow-inner">
+            <div class="hidden sm:flex h-10 items-center space-x-1.5 px-3.5 rounded-xl bg-gradient-to-r from-amber-950/80 to-rose-950/80 border border-amber-500/40 shadow-inner">
               <span class="text-amber-400 text-sm animate-pulse">⚡</span>
-              <span class="font-bold text-xs text-amber-300" id="user-xp-display">${state.userXp} XP</span>
+              <span class="font-bold text-xs text-amber-300 tracking-wide" id="user-xp-display">${state.userXp} XP</span>
             </div>
 
             <!-- Report Alert Button -->
-            <button data-nav="alert" class="nav-direct-link hidden md:flex items-center space-x-1 px-3 py-1.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/80 border border-rose-500/40 text-rose-300 text-xs font-semibold transition-all">
-              <span class="animate-pulse">🚨</span>
+            <button data-nav="alert" class="nav-direct-link hidden md:flex h-10 items-center space-x-1.5 px-3.5 rounded-xl bg-rose-950/70 hover:bg-rose-900/80 border border-rose-500/40 text-rose-300 text-xs font-semibold transition-all shadow-sm">
+              <span class="animate-pulse text-sm">🚨</span>
               <span>Report</span>
             </button>
 
             <!-- Profile Avatar -->
-            <button id="profile-btn" class="flex items-center space-x-2 p-1.5 rounded-xl bg-amber-950/30 hover:bg-amber-900/40 border border-amber-500/30 transition-colors">
-              <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-amber-600 to-rose-800 flex items-center justify-center font-bold text-xs text-white">
+            <button id="profile-btn" class="h-10 px-2 sm:px-2.5 rounded-xl bg-amber-950/30 hover:bg-amber-900/40 border border-amber-500/30 hover:border-amber-400 transition-all flex items-center space-x-2 shadow-sm">
+              <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-amber-500 to-rose-700 flex items-center justify-center font-bold text-xs text-white shrink-0 shadow-inner">
                 ${state.userInitials || "RS"}
               </div>
               <div class="hidden xl:block text-left pr-1">
@@ -214,8 +214,8 @@ export function renderNavbar(container, state, onNavigate, onSearch, onProfile) 
             </button>
 
             <!-- Mobile Menu Toggle Button -->
-            <button id="mobile-menu-btn" class="lg:hidden p-2 text-amber-300 hover:text-white focus:outline-none">
-              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+            <button id="mobile-menu-btn" class="lg:hidden h-10 w-10 rounded-xl bg-neutral-900/90 border border-amber-500/30 text-amber-300 hover:text-white flex items-center justify-center focus:outline-none transition-colors">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
             </button>
 
           </div>
